@@ -2,7 +2,7 @@
 
 @section('content')
     <body onload="initialize()">
-    <input id="order-input" class="controls" type="text" placeholder="Местоположение заказа">
+    <input id="order-input" class="controls" type="text" placeholder="Введите номер заказа">
     <div id="map_canvas"></div>
     </body>
 
@@ -10,7 +10,7 @@
         function initialize() {
             marker = null;
             var mapOptions = {
-                center: new google.maps.LatLng(37.286172, -121.80929),
+                center: new google.maps.LatLng(59.9294945,30.3600027),
                 zoom: 8,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
