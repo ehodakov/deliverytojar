@@ -12,7 +12,21 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('map');
+});
+
+Route::get('/order/{order}', function (App\Order $order) {
+    if ($car = $order->car) {
+        return Response::json([
+            'result' => 'ok',
+            'location' => $car->location,
+            'latitude' => $car->latitude,
+            'longitude' => $car->longitude,
+        ]);
+    }
+    return Response::json([
+        'result' => 'error'
+    ]);
 });
 
 Route::auth();
