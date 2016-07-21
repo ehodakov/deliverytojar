@@ -13,6 +13,6 @@ class Order extends Model
 
     public function car()
     {
-        return $this->belongsTo('App\Order');
+        return $this->belongsTo('App\Car');
     }
 }
